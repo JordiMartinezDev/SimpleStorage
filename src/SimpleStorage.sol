@@ -35,4 +35,8 @@ contract SimpleStorage {
     function checkMyBalance() public returns (uint) {
         return balanceOf[msg.sender];
     }
+
+    function generateRandomNumber() public pure returns (uint) {
+        return uint(keccak256(abi.encodePacked(now))) % 100;
+    }
 }
