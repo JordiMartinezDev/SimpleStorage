@@ -13,4 +13,16 @@ contract StorageFactory {
         // SimpleStorage simpleStorage = new SimpleStorage();
         listOfSimpleStorageContracts.push(simpleStorageContractVariable);
     }
+
+    function sfStore(
+        uint256 _simpleStorageIndex,
+        uint256 _simpleStorageNumber
+    ) public {
+        // Address
+        // ABI
+        // SimpleStorage(address(simpleStorageArray[_simpleStorageIndex])).store(_simpleStorageNumber);
+        listOfSimpleStorageContracts[_simpleStorageIndex].store(
+            _simpleStorageNumber
+        );
+    }
 }
